@@ -12,12 +12,33 @@ app.get("/", (request, response) => {
   response.send({
     SupportedRoutes: ["/Harrow", "/Heathrow", "/Stratford"],
     Version: "0.0.0.1",
-    Author: "cdewet",
+    Author: "cdewet & mmatanda",
   });
 });
 
 app.get("/Heathrow", (request, response) => {
   response.send(Heathrow);
+});
+
+app.get("/Heathrow/pharmacies", (request, response) => {
+  response.send(Heathrow.pharmacies);
+});
+
+app.get("/Heathrow/colleges", (request, response) => {
+  response.send(Heathrow.colleges);
+});
+
+app.get("/Heathrow/colleges", (request, response) => {
+  response.send(Heathrow.colleges);
+});
+
+app.get("/Heathrow/doctors", (request, response) => {
+  response.send(Heathrow.doctors);
+});
+
+
+app.get("/Heathrow/hospitals", (request, response) => {
+  response.send(Heathrow.hospitals);
 });
 
 app.listen(port, () => {

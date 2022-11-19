@@ -16,6 +16,10 @@ app.get("/", (request, response) => {
   });
 });
 
+app.get("/Heathrow", (request, response) => {
+  response.send(Heathrow);
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
